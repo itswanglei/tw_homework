@@ -1,0 +1,11 @@
+.fixedBox {
+  color: white;
+  background: rgb(95, 49, 28);
+  height: 600px;
+  float: right;
+}
+.flexibleBox {
+  background: burlywood;
+  height: 600px;
+  overflow: hidden;
+}
