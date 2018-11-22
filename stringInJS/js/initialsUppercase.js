@@ -7,14 +7,14 @@ function convertInitialsToUppercaseForEachWord(inputSentence) {
     let initials = words[i].charAt(0);
     words[i] = words[i].replace(initials, initials.toUpperCase());
   }
-  
+
   let outputSentence = words.join(" ");
   return outputSentence;
 }
 
 // Method 2: Use regular expression
 function convertInitialsToUppercaseForEachWord_method2(inputSentence) {
-  let outputSentence = inputSentence.toLowerCase().replace(/( |^)[a-z]/g, (L) => L.toUpperCase());
+  let outputSentence = inputSentence.toLowerCase().replace(/( |^)[a-z]/g, (initials) => initials.toUpperCase());
   return outputSentence;
 }
 
