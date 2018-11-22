@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>float+absolute实现元素居中</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style type="text/CSS">
+        div {
+            height: 200px;
+            width: 200px;
+            background: grey;
+            color: white;
+            text-align: center;
+            margin: 10px;
+            float: left;
+            position: relative;
+            right: 50%;
+        }        
+        body {            
+            position: absolute;
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <p>box1</p>
+    </div>
+    <div id="box2">
+        <p>box2</p>
+    </div>
+    <div id="box3">
+        <p>box3</p>
+    </div>    
+</body>
+</html>
