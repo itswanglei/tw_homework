@@ -16,8 +16,7 @@ function findElementType(array) {
   return elementType;
 }
 
-function recordElementRepeatTimes(array) {
-  const elementType = findElementType(array);
+function recordElementRepeatTimes(array, elementType) {
   let repeatTimes = new Array(elementType.length).fill(0);
   for (let i = 0; i < array.length; i++) {
     for (let j = 0; j < elementType.length; j++) {
@@ -29,13 +28,15 @@ function recordElementRepeatTimes(array) {
   return repeatTimes;
 }
 
-function findMaxElementRepeatTimes(array) {
-  const repeatTimes = recordElementRepeatTimes(array);
-  return Math.max(...repeatTimes);
+function findMostFrequentlyOccurringElement(array) {
+  const elementType = findElementType(array);
+  const repeatTimes = recordElementRepeatTimes(array, elementType);
+  const maxRepeatTimes = Math.max(...repeatTimes);
+  return elementType[repeatTimes.indexOf(maxRepeatTimes)];
 }
 
 let a = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
-let maxRepeatTimes = findMaxElementRepeatTimes(a);
+let highFrequencyElement = findMostFrequentlyOccurringElement(a);
 
 document.write("The array is: [" + a + "]</br>");
-document.write("The most frequently occurring element in the array is: " + maxRepeatTimes);
+document.write("The most frequently occurring element in the array is: " + highFrequencyElement);
