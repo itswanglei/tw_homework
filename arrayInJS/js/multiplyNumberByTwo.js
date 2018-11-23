@@ -1,4 +1,4 @@
-function multiplyByTwo(array) {
+function multiplyElementByTwo(array) {
   let newArray = [array.length];
   for (let i = 0; i < array.length; i++) {
     newArray[i] = array[i] * 2;
@@ -7,7 +7,7 @@ function multiplyByTwo(array) {
 }
 
 const originArry = [1,2,3,4,5];
-const newArray = multiplyByTwo(originArry);
+const newArray = multiplyElementByTwo(originArry);
 
 document.write("The origin array is: [" + originArry + "]</br>");
 document.write("The new array is: [" + newArray + "]");
