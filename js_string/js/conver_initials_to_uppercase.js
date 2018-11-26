@@ -13,12 +13,12 @@ function convertInitialsToUppercaseForEachWord(inputSentence) {
 }
 
 // Method 2: Use regular expression
-function convertInitialsToUppercaseForEachWord_method2(inputSentence) {
+function convertInitialsToUppercaseForEachWord_useRegex(inputSentence) {
   let outputSentence = inputSentence.toLowerCase().replace(/( |^)[a-z]/g, (initials) => initials.toUpperCase());
   return outputSentence;
 }
 
 const sentence = 'good afternoon, mr mike.';
 const newSentence = convertInitialsToUppercaseForEachWord(sentence);
-const newSentence2 = convertInitialsToUppercaseForEachWord_method2(sentence);
+const newSentence2 = convertInitialsToUppercaseForEachWord_useRegex(sentence);
 document.write(newSentence + "</br>" + newSentence2);
