@@ -1,8 +1,5 @@
 function isArray(variables) {
-  if(variables instanceof Array) {
-    return true;
-  }
-  return false;
+  return variables instanceof Array;
 }
 
 const a = '[a, b, c, d]';
