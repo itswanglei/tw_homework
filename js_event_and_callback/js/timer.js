@@ -1,18 +1,13 @@
-let start = document.getElementById("start");
-let stop = document.getElementById("stop");
+let displayTime = 0;
+let setTiming;
 
-function timing() {
-  let displayTime = 0;
-  let setTiming;
-  start.onclick = function StartTiming() {
-    document.getElementById("result").value = displayTime;
-    displayTime ++;
-    setTiming = setTimeout(StartTiming, 1000);
-  }
-  stop.onclick = function stopTiming() {
-    clearTimeout(setTiming);
-    displayTime = 0;
-  }
+function startTiming() {
+  document.getElementById("result").value = displayTime;
+  displayTime++;
+  setTiming = setTimeout(startTiming, 1000);
 }
 
-timing();
+function stopTiming() {
+  clearTimeout(setTiming);
+  displayTime = 0;
+}
