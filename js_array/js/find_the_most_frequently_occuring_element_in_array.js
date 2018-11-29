@@ -1,3 +1,4 @@
+// Method 1: Calculate element types and occurring frequency separately with two arrays
 function findElementType(array) {
   let differentTimes = 0;
   let elementType = [];
@@ -35,8 +36,39 @@ function findMostFrequentlyOccurringElement(array) {
   return elementType[repeatTimes.indexOf(maxRepeatTimes)];
 }
 
+// Method 2: Use object to record the element types and the occurring frequency at the same time
+function recordElementTypesAndOccurringFrequency(array) {
+  let elementFrequency = [];
+  for (let i = 0; i < array.length; i++) {
+    let differentTimes = 0;
+    for (let j = 0; j < elementFrequency.length; j++) {
+      if (array[i] === elementFrequency[j].key) {
+        elementFrequency[j].value++;
+      } else {
+        differentTimes++;
+      }
+    }
+    if (differentTimes === elementFrequency.length) {
+      elementFrequency.push({
+        key: array[i],
+        value: 1,
+      });
+    }
+  }
+  return elementFrequency;
+}
+
+function findHightestFrequencyElementUseObject(array) {
+  const elementFrequency = recordElementTypesAndOccurringFrequency(array);
+  let repeatTimes = [];
+  for (let i = 0; i < elementFrequency.length; i++) {
+    repeatTimes.push(elementFrequency[i].value);
+  }
+  const maxRepeatTimes = Math.max(...repeatTimes);
+  return elementFrequency[repeatTimes.indexOf(maxRepeatTimes)].key;
+}
+
 const array = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 const highFrequencyElement = findMostFrequentlyOccurringElement(array);
-
 document.write("The array is: [" + array + "]</br>");
 document.write("The most frequently occurring element in the array is: " + highFrequencyElement);
