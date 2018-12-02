@@ -8,6 +8,8 @@ function startTiming() {
 }
 
 function stopTiming() {
-  clearTimeout(setTiming);
+  if (setTiming) {
+    clearTimeout(setTiming);
+  }
   displayTime = 0;
 }
