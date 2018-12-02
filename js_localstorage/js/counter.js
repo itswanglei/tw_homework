@@ -4,11 +4,11 @@ function count() {
 }
 
 function readLocalStorage() {
-  creatLocalStorage();
+  createLocalStorage();
   document.getElementById("result").value = localStorage.clickCount;
 }
 
-function creatLocalStorage() {
+function createLocalStorage() {
   if (!localStorage.clickCount) {
     localStorage.setItem("clickCount", "0");
   }
