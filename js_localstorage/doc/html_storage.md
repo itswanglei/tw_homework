@@ -15,4 +15,5 @@
 - `Storage.getItem([key])`：返回对应的值
 - `Storage.setItem([key], [value])`：设置一个新的存储项，或更改现有存储项的值
 - `Storage.removeItem([key])`：删除一个存储项
-- `Storage.cleat()`：清空全部存储项
+- `Storage.clear()`：清空全部存储项
+
