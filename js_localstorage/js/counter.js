@@ -15,6 +15,5 @@ function createLocalStorage() {
 }
 
 function changeNumber() {
-  localStorage.clickCount = Number(localStorage.clickCount) + 1;
-  return localStorage.clickCount;
+  return localStorage.clickCount = Number(localStorage.clickCount) + 1;
 }
