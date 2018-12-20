@@ -38,7 +38,7 @@ var object = {
    var object = new constructorFunction();
    ```
 
-4. `var object = Object.creat(protoObject);`
+4. `var object = Object.create(protoObject);`
 
    即以`protoObject`为原型创建一个新对象`object`，`object`会继承`protoObject`的属性。
 
