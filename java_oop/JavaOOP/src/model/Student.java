@@ -6,7 +6,11 @@ public class Student {
   private String gender;
   private long id;
 
-  public Student() {
+  public Student(String name, int age, String gender, long id) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.id = id;
   }
 
   public String getName() {

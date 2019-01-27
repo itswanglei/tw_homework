@@ -3,7 +3,7 @@ import model.Student;
 public class Main {
 
   public static void main(String[] args) {
-    Student student = new Student();
+    Student student = new Student("野原新之助", 5, "男", 1234567890);
     student.setName("王蕾");
     student.setAge(25);
     student.setGender("女");
