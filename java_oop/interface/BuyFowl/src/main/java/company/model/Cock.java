@@ -1,8 +1,8 @@
-package main.java.model;
+package main.java.company.model;
 
-public class Hen extends Fowl {
-    public Hen() {
-        super(3);
+public class Cock extends Fowl {
+    public Cock() {
+        super(5);
     }
 
     @Override

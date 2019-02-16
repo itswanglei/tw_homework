@@ -1,4 +1,4 @@
-package main.java.tools;
+package main.java.company.tools;
 
 public class Print {
     public void printResult(int cockQuantity, int henQuantity, int chickQuantity) {

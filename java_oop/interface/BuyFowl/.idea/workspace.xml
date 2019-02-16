@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="20e7b89c-34f8-4e39-a8dd-b31765c51d12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Chick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Cock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fowl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Fowl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Hen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Chick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/model/Chick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Cock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/model/Cock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Fowl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/model/Fowl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Hen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/model/Hen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tools/Print.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/tools/Print.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,10 +20,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="26" selection-start-column="26" selection-end-column="26" />
+            <state relative-caret-position="342">
+              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,28 +32,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tools/Print.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/company/tools/Print.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+            <state>
+              <caret column="26" selection-start-column="26" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Fowl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/company/model/Fowl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state>
+              <caret column="31" selection-start-column="31" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Cock.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/company/model/Cock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state>
+              <caret column="31" selection-start-column="31" selection-end-column="31" />
               <folding>
                 <element signature="e#124#125#0" expanded="true" />
                 <element signature="e#182#183#0" expanded="true" />
@@ -62,10 +63,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Hen.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/company/model/Hen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state>
+              <caret column="31" selection-start-column="31" selection-end-column="31" />
               <folding>
                 <element signature="e#122#123#0" expanded="true" />
                 <element signature="e#180#181#0" expanded="true" />
@@ -75,10 +76,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Chick.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/company/model/Chick.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="8" selection-start-column="8" selection-end-column="8" />
+              <caret column="26" selection-start-column="26" selection-end-column="26" />
               <folding>
                 <element signature="e#129#130#0" expanded="true" />
                 <element signature="e#161#162#0" expanded="true" />
@@ -105,15 +106,18 @@
       <list>
         <option value="$PROJECT_DIR$/src/Buy.java" />
         <option value="$PROJECT_DIR$/src/BuyFowl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tools/Print.java" />
         <option value="$PROJECT_DIR$/src/Fowl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Fowl.java" />
         <option value="$PROJECT_DIR$/src/Cock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Cock.java" />
         <option value="$PROJECT_DIR$/src/Hen.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Hen.java" />
         <option value="$PROJECT_DIR$/src/Chick.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tools/Print.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Fowl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Cock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Hen.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Chick.java" />
+        <option value="$PROJECT_DIR$/src/main/java/company/Main.java" />
       </list>
     </option>
   </component>
@@ -152,7 +156,7 @@
               <item name="BuyFowl" type="b2602c69:ProjectViewProjectNode" />
               <item name="BuyFowl" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -163,7 +167,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550284607053" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550285329999" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -189,7 +193,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="main.java.service.Main" />
+      <option name="MAIN_CLASS_NAME" value="main.java.company.Main" />
       <module name="BuyFowl" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -218,8 +222,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -228,7 +233,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -236,7 +241,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3262295" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -250,46 +255,24 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Buy.java" />
     <entry file="file://$PROJECT_DIR$/src/BuyFowl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Hen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#122#123#0" expanded="true" />
-            <element signature="e#180#181#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Chick.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/tools/Print.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-          <folding>
-            <element signature="e#129#130#0" expanded="true" />
-            <element signature="e#161#162#0" expanded="true" />
-          </folding>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Fowl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/model/Fowl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tools/Print.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/model/Cock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Cock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
           <folding>
             <element signature="e#124#125#0" expanded="true" />
             <element signature="e#182#183#0" expanded="true" />
@@ -297,10 +280,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/model/Hen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+          <folding>
+            <element signature="e#122#123#0" expanded="true" />
+            <element signature="e#180#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/model/Chick.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="26" selection-start-column="26" selection-end-column="26" />
+          <folding>
+            <element signature="e#129#130#0" expanded="true" />
+            <element signature="e#161#162#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,10 +1,10 @@
-package main.java.service;
+package main.java.company;
 
-import main.java.model.Chick;
-import main.java.model.Cock;
-import main.java.model.Fowl;
-import main.java.model.Hen;
-import main.java.tools.Print;
+import main.java.company.model.Chick;
+import main.java.company.model.Cock;
+import main.java.company.model.Fowl;
+import main.java.company.model.Hen;
+import main.java.company.tools.Print;
 
 public class Main {
 

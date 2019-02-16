@@ -1,4 +1,4 @@
-package main.java.model;
+package main.java.company.model;
 
 public class Chick extends Fowl {
     public Chick() {

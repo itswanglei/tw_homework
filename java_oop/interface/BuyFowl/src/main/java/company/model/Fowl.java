@@ -1,4 +1,4 @@
-package main.java.model;
+package main.java.company.model;
 
 public abstract class Fowl {
     private final double price;
