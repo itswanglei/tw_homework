@@ -1,10 +1,10 @@
 public class Cock extends Fowl {
-  public Cock() {
-    super(5);
-  }
+    public Cock() {
+        super(5);
+    }
 
-  @Override
-  public int setMaxQuantity(double money) {
-    return (int) Math.floor(money / this.getPrice());
-  }
+    @Override
+    public int setMaxQuantity(double money) {
+        return (int) Math.floor(money / this.getPrice());
+    }
 }

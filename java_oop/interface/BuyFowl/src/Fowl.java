@@ -1,13 +1,13 @@
 public abstract class Fowl {
-  private final double price;
+    private final double price;
 
-  public Fowl(double price) {
-    this.price = price;
-  }
+    public Fowl(double price) {
+        this.price = price;
+    }
 
-  public double getPrice() {
-    return price;
-  }
+    public double getPrice() {
+        return price;
+    }
 
-  public abstract int setMaxQuantity(double money);
+    public abstract int setMaxQuantity(double money);
 }
