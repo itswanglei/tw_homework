@@ -24,7 +24,9 @@ public class Main {
         for (int cockQuantity = 1; cockQuantity < maxCock; cockQuantity++) {
             for (int henQuantity = 1; henQuantity < mxHen; henQuantity++) {
                 int chickQuantity = total - cockQuantity - henQuantity;
-                if (chickQuantity % 3 == 0 && cockQuantity * cock.getPrice() + henQuantity * hen.getPrice() + chickQuantity / 3 == money) {
+                boolean isMoneyOfChickInteger = chickQuantity % 3 == 0;
+                boolean isEqualTotalMonay = cockQuantity * cock.getPrice() + henQuantity * hen.getPrice() + chickQuantity / 3 == money;
+                if (isMoneyOfChickInteger && isEqualTotalMonay) {
                     print.printResult(cockQuantity, henQuantity, chickQuantity);
                 }
             }
