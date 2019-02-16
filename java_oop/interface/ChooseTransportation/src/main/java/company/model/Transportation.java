@@ -1,3 +1,5 @@
+package main.java.company.model;
+
 public interface Transportation {
     boolean takeSelfDriving(double money);
 

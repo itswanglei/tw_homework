@@ -1,3 +1,7 @@
+package main.java.company;
+
+import main.java.company.model.CityToCity;
+
 public class Main {
 
     public static void main(String[] args) {

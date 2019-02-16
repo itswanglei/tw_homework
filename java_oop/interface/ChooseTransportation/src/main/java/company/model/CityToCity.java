@@ -1,3 +1,5 @@
+package main.java.company.model;
+
 public class CityToCity implements Transportation {
     private String departure;
     private String destination;
