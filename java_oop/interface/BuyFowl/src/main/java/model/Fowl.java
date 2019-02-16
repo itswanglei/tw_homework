@@ -1,3 +1,5 @@
+package main.java.model;
+
 public abstract class Fowl {
     private final double price;
 

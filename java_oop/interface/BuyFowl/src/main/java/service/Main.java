@@ -1,3 +1,9 @@
+package main.java.service;
+
+import main.java.model.Chick;
+import main.java.model.Cock;
+import main.java.model.Fowl;
+import main.java.model.Hen;
 import main.java.tools.Print;
 
 public class Main {
