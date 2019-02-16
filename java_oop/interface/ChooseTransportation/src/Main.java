@@ -1,13 +1,17 @@
 public class Main {
 
     public static void main(String[] args) {
-        FromWuhanToBeijing fromWuhanToBeijing = new FromWuhanToBeijing();
+        CityToCity cityToCity = new CityToCity("武汉", "北京");
+        cityToCity.setCostOfSelfDriving(500);
+        cityToCity.setCostOfTakeBus(300);
+        cityToCity.setCostOfTakePlane(1000);
+        cityToCity.setCostOfTakeTrain(400);
 
         int money = 300;
-        boolean canSelfDriving = fromWuhanToBeijing.takeSelfDriving(money);
-        boolean canTakeBus = fromWuhanToBeijing.takeBus(money);
-        boolean canTakeTrain = fromWuhanToBeijing.takeTrain(money);
-        boolean canTakePlane = fromWuhanToBeijing.takePlane(money);
+        boolean canSelfDriving = cityToCity.takeSelfDriving(money);
+        boolean canTakeBus = cityToCity.takeBus(money);
+        boolean canTakeTrain = cityToCity.takeTrain(money);
+        boolean canTakePlane = cityToCity.takePlane(money);
 
         if (canSelfDriving) {
             System.out.println("小明可以从武汉自驾到北京");
