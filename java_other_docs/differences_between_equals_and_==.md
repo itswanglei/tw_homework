@@ -9,13 +9,13 @@
 - 在使用`==`时要注意左右操作数的可比性，即左右操作数应为相同数据类型或子类和父类的关系，例如：
 
   ```java
-  Thread t = new Thread(); 
-  Object o = new Object(); 
-  String s = new String("GEEKS"); 
+  Thread thr = new Thread(); 
+  Object obj = new Object(); 
+  String str = new String("GEEKS"); 
   
-  System.out.println(t == o); // false（t与o可比，因为Thread类是Object类的子类）
-  System.out.println(o == s); // false（s与o可比，因为String类是Object类的子类）
-  System.out.println(t == s); // error: incomparable types: Thread and String
+  System.out.println(thr == obj); // false（thr与obj可比，因为Thread类是Object类的子类）
+  System.out.println(obj == str); // false（str与obj可比，因为String类是Object类的子类）
+  System.out.println(thr == str); // error: incomparable types: Thread and String
   ```
 
 ### equals方法
@@ -43,10 +43,11 @@
       
       @Override
       public boolean equals(Object obj) {
-          return this.name.equals(((People)obj).name) && this.age == ((People)obj).age; // 即通过比较属性值判断两对象是否相等
+          return this.name.equals(((People)obj).name) && this.age == ((People)obj).age; 
+        	// 即通过比较属性值判断两对象是否相等
       }
   }
-  // --------------------------------------------------------------------------------
+  // ----------------------------------------------------------------------------
   // 例2：String的equals()方法
   public boolean equals(Object anObject) {
      // 首先判断两个对象的内存地址是否相同
@@ -98,6 +99,18 @@
    String s2 = new String("HELLO"); 
    System.out.println(s1 == s2); // false：因为s1和s2是两个对象，存储的地址不同
    System.out.println(s1.equals(s2)); // true：因为s1和s2存储的内容相同
+   
+   int s1 = 1;
+   int s2 = 1;
+   s1 == s2; // true
+   
+   Integer s1 = new Integer(1);
+   int s2 = 1;
+   s1 == s2; // false
+   
+   Interger s1 = new Integer(1);
+   Interger s2 = new Integer(1);
+   s1 == s2; // false
    ```
 
    
@@ -106,15 +119,16 @@
 
 ### hash算法
 
-- 概念：hash算法也成散列算法，其作用是通过特定的运算将对象的键值映射成对象在集合中存储的位置。
+- 概念：哈希算法也称散列算法，其作用是通过特定的运算将对象的键值映射成对象在集合中存储的位置。
 
-- 用途：利用hash算法可以根据元素内容获得其存储位置，避免了遍历，方便在集合中查找特定元素。
+- 用途：利用哈希算法可以根据元素内容获得其存储位置，避免了遍历的操作，方便在集合中查找特定元素。
 
-- 举例：以一个简单的hash算法——除留余数法为例。
+- 举例：以一个简单的哈希算法——除留余数法为例。
 
-  （除留余数法：将需要存入数组除以某个常数（如数组的长度）后，以余数作为索引。）
+  （除留余数法：将需要存入数组的数除以某个常数（如数组的长度）后，以余数作为索引。）
 
   如，将 323 ，458 ，25 ，340 ，28 ，969， 77 使用「除留余数法」存储在长度为11的数组中，则每个数字在数组中存放的位置为：
+
 
   | 值   | 77   | 969  |      | 25   | 323  |      | 28   | 458  |      |      | 340  |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -126,7 +140,7 @@
 
 ### hashCode方法
 
-- 概念：Java中的`hashCode()`方法就是一种hash算法，它根据一定的规则将与对象相关的信息（比如对象的存储地址，对象的字段等）映射成一个数值，这个数值称作为散列值，其返回值为一个int型值。
+- 概念：Java中的`hashCode()`方法就是一种哈希算法，它根据一定的规则将与对象相关的信息（比如对象的存储地址，对象的字段等）映射成一个数值，这个数值称作为散列值，其返回值为一个int型值。
 
 - `hashCode()`方法和`equals()`方法的关系：
 
@@ -166,17 +180,18 @@ public class Main {
  
     public static void main(String[] args) {
         People p1 = new People("Jack", 12);
-        System.out.println(p1.hashCode());
+        System.out.println(p1.hashCode()); // 返回值为p1的地址
              
-        HashMap<People, Integer> hashMap = new HashMap<People, Integer>();
-        hashMap.put(p1, 1);
+        HashMap<People, Integer> hashMap = new HashMap<>();
+        hashMap.put(p1, 1); // 即指定了p1的索引值为1
          
-        System.out.println(hashMap.get(new People("Jack", 12))); // 输出：null
+      	People p2 = new People("Jack", 12); 
+      	System.out.println(hashMap.get(p2)); // 输出：null
     }
 }
 ```
 
-上述代码期望的输出为“1”，但实际的输出为`null`，发生上述现象的原因是：main函数最后一行实例化了另一个People对象，该对象的存储地址与p1不同，由于People类中只重写了`equals()`方法而未重写`hashCode()`方法，则hashMap的get方法无法根据hash值查找到对应的对象，因而返回`null`。如果希望上述代码按照期望输出“1”，则需要重写`hashCode()`方法，**使`equals()`方法和`hashCode()`方法在逻辑上保持一致**，例如：
+上述代码期望的输出为“1”，但实际的输出为`null`，发生上述现象的原因是：p2对象的存储地址与p1不同，由于People类中只重写了`equals()`方法而未重写`hashCode()`方法，则hashMap的get方法无法根据hash值查找到对应的对象，因而返回`null`。如果希望上述代码按照期望输出“1”，则需要重写`hashCode()`方法，**使`equals()`方法和`hashCode()`方法在逻辑上保持一致**，例如：
 
 ```java
 public int hashCode() {
