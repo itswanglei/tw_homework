@@ -123,4 +123,3 @@ Object[] elements = linkedList.toArray(); // 返回长度为3的Object数组
   ```
 
   
-
