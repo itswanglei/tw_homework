@@ -69,6 +69,18 @@ public class MyMap<K, V> {
         }
     }
 
+    public V replace(K key, V values) {
+        V replacedValue;
+        for (int i = 0; i < this.size(); i++) {
+            if (key == this.keys[i]) {
+                replacedValue = this.values[i];
+                this.values[i] = values;
+                return replacedValue;
+            }
+        }
+        return null;
+    }
+
     public void printMyMap() {
         System.out.print("[");
         for (int i = 0; i < this.size(); i++) {

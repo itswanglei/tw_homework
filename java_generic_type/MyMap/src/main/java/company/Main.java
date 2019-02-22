@@ -28,6 +28,10 @@ public class Main {
         myMap.printMyMap();
         System.out.println(myMap.size());
 
+        System.out.println("\nChange the value of the specified key:");
+        System.out.println(myMap.replace(2, "a"));
+        myMap.printMyMap();
+
         System.out.println("\nClear myMap:");
         myMap.clear();
         myMap.printMyMap();
