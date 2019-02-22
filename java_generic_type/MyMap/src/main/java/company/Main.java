@@ -15,6 +15,6 @@ public class Main {
         myMap.printMyMap();
 
         System.out.println("\nCalculate the size of myMap:");
-        myMap.size();
+        System.out.println(myMap.size());
     }
 }

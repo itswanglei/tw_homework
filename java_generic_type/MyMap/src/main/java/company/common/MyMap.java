@@ -10,11 +10,17 @@ public class MyMap<K, V> {
     }
 
     public int size() {
-        return this.keys.length;
+        int count = 0;
+        for (K key : keys) {
+            if (key != null) {
+                count++;
+            }
+        }
+        return count;
     }
 
     public boolean put(K key, V value) {
-        for (int i = 0; i < this.size(); i++) {
+        for (int i = 0; i < this.keys.length; i++) {
             if (this.keys[i] == key) {
                 return false;
             }
@@ -29,7 +35,7 @@ public class MyMap<K, V> {
 
     public void printMyMap() {
         System.out.print("[");
-        for (int i = 0; i < this.size(); i++) {
+        for (int i = 0; i < this.keys.length; i++) {
             if (keys[i] != null) {
                 if (i != 0) {
                     System.out.print(", ");
