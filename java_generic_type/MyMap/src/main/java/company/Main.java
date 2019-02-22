@@ -32,6 +32,9 @@ public class Main {
         System.out.println(myMap.replace(2, "a"));
         myMap.printMyMap();
 
+        System.out.println("\nJudge if the map has the specified value:");
+        System.out.println(myMap.containsValue("a"));
+
         System.out.println("\nClear myMap:");
         myMap.clear();
         myMap.printMyMap();
