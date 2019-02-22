@@ -1,5 +1,8 @@
 package main.java.company.common;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class MyMap<K, V> {
     private K[] keys;
     private V[] values;
@@ -101,4 +104,11 @@ public class MyMap<K, V> {
         System.out.println("]");
     }
 
+    public K[] getKeys() {
+        return this.keys;
+    }
+
+    public V[] getValues() {
+        return this.values;
+    }
 }
