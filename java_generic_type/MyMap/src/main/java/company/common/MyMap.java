@@ -1,8 +1,5 @@
 package main.java.company.common;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
 public class MyMap<K, V> {
     private K[] keys;
     private V[] values;
