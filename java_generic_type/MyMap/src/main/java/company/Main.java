@@ -19,5 +19,8 @@ public class Main {
 
         System.out.println("\nCalculate the size of myMap:");
         System.out.println(myMap.size());
+
+        System.out.println("\nFind the specified map in myMap:");
+        System.out.println(myMap.get(1));
     }
 }

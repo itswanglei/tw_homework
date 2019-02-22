@@ -28,6 +28,15 @@ public class MyMap<K, V> {
         return false;
     }
 
+    public V get(K key) {
+        for (int i = 0; i < this.size(); i++) {
+            if (key == this.keys[i]) {
+                return this.values[i];
+            }
+        }
+        return null;
+    }
+
     public boolean put(K key, V value) {
         if (this.containsKey(key)) {
             return false;
