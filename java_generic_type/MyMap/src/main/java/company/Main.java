@@ -46,7 +46,7 @@ public class Main {
         myMap.put(2, "b");
         myMap.put(3, "c");
         for (Entry entry : myMap.entrySet()) {
-            System.out.println(entry.getKey() + "=" + entry.getValue());
+            System.out.println(entry.toString());
         }
     }
 }

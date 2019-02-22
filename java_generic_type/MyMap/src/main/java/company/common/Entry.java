@@ -16,4 +16,8 @@ public class Entry<K, V> {
     public V getValue() {
         return this.value;
     }
+
+    public String toString() {
+        return this.key + "=" + this.value;
+    }
 }
