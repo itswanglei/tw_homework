@@ -60,6 +60,13 @@ public class MyMap<K, V> {
         return false;
     }
 
+    public void clear() {
+        for (int i = 0; i < this.size(); i++) {
+            this.keys[i] = null;
+            this.values[i] = null;
+        }
+    }
+
     public void printMyMap() {
         System.out.print("[");
         for (int i = 0; i < this.size(); i++) {

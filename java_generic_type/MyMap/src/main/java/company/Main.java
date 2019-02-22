@@ -27,5 +27,10 @@ public class Main {
         myMap.remove(1);
         myMap.printMyMap();
         System.out.println(myMap.size());
+
+        System.out.println("\nClear myMap:");
+        myMap.clear();
+        myMap.printMyMap();
+        System.out.println(myMap.size());
     }
 }
