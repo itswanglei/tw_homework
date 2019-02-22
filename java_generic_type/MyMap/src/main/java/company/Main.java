@@ -24,7 +24,7 @@ public class Main {
         System.out.println(myMap.get(1));
 
         System.out.println("\nRemove the specified map in myMap:");
-        myMap.remove(1);
+        System.out.println(myMap.remove(1));
         myMap.printMyMap();
         System.out.println(myMap.size());
 

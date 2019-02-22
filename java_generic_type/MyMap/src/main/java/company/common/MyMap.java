@@ -45,19 +45,21 @@ public class MyMap<K, V> {
         return true;
     }
 
-    public boolean remove(K key) {
+    public V remove(K key) {
+        V removedValue;
         for (int i = 0; i < this.size(); i++) {
             if (key == this.keys[i]) {
                 this.keys[i] = null;
+                removedValue = this.values[i];
                 this.values[i] = null;
                 for (int j = i; j < this.size(); j++) {
                     this.keys[j] = this.keys[j + 1];
                     this.values[j] = this.values[j + 1];
                 }
-                return true;
+                return removedValue;
             }
         }
-        return false;
+        return null;
     }
 
     public void clear() {
