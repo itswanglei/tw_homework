@@ -11,7 +11,7 @@ public class MyMap<K, V> {
 
     public int size() {
         int count = 0;
-        for (K key : keys) {
+        for (K key : this.keys) {
             if (key != null) {
                 count++;
             }
@@ -20,7 +20,7 @@ public class MyMap<K, V> {
     }
 
     public boolean containsKey(K key) {
-        for (K existingKey : keys) {
+        for (K existingKey : this.keys) {
             if (existingKey == key) {
                 return true;
             }
@@ -52,11 +52,11 @@ public class MyMap<K, V> {
     public void printMyMap() {
         System.out.print("[");
         for (int i = 0; i < this.keys.length; i++) {
-            if (keys[i] != null) {
+            if (this.keys[i] != null) {
                 if (i != 0) {
                     System.out.print(", ");
                 }
-                System.out.print(keys[i] + "=" + values[i]);
+                System.out.print(this.keys[i] + "=" + this.values[i]);
             }
         }
         System.out.println("]");
