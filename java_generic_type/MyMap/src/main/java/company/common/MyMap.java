@@ -98,6 +98,16 @@ public class MyMap<K, V> {
         return entries;
     }
 
+    @Override
+    public String toString() {
+        String[] entryStringArray = new String[this.size()];
+        Entry[] entries = this.entrySet();
+        for (int i = 0; i < this.size(); i++) {
+            entryStringArray[i] = entries[i].toString();
+        }
+        return "[" + String.join(", ", entryStringArray) + "]";
+    }
+
     public void printMyMap() {
         System.out.print("[");
         for (int i = 0; i < this.size(); i++) {
