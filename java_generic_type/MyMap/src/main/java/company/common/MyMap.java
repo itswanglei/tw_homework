@@ -108,17 +108,6 @@ public class MyMap<K, V> {
         return "[" + String.join(", ", entryStringArray) + "]";
     }
 
-    public void printMyMap() {
-        System.out.print("[");
-        for (int i = 0; i < this.size(); i++) {
-            if (i != 0) {
-                System.out.print(", ");
-            }
-            System.out.print(this.keys[i] + "=" + this.values[i]);
-        }
-        System.out.println("]");
-    }
-
     public K[] getKeys() {
         return this.keys;
     }

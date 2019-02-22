@@ -17,6 +17,7 @@ public class Entry<K, V> {
         return this.value;
     }
 
+    @Override
     public String toString() {
         return this.key + "=" + this.value;
     }
