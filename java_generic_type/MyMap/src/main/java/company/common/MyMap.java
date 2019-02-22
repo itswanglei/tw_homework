@@ -20,18 +20,18 @@ public class MyMap<K, V> {
     }
 
     public boolean put(K key, V value) {
-        for (int i = 0; i < this.keys.length; i++) {
-            if (this.keys[i] == key) {
+        for (K existingKey : this.keys) {
+            if (existingKey == key) {
                 return false;
             }
-            if (this.keys[i] == null) {
-                this.keys[i] = key;
-                this.values[i] = value;
-                return true;
-            }
         }
-        return false;
+        int elementsNumber = this.size();
+        this.keys[elementsNumber] = key;
+        this.values[elementsNumber] = value;
+        return true;
     }
+
+
 
     public void printMyMap() {
         System.out.print("[");
