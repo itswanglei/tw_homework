@@ -9,6 +9,9 @@ public class Main {
         MyMap<Integer, String> myMap = new MyMap<>();
         myMap.printMyMap();
 
+        System.out.println("\nJudge if myMap has the specified key:");
+        System.out.println(myMap.containsKey(1));
+
         System.out.println("\nAdd element for myMap:");
         myMap.put(1, "a");
         myMap.put(2, "b");
