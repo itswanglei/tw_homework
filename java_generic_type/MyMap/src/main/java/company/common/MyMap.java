@@ -19,11 +19,18 @@ public class MyMap<K, V> {
         return count;
     }
 
-    public boolean put(K key, V value) {
-        for (K existingKey : this.keys) {
+    public boolean containsKey(K key) {
+        for (K existingKey : keys) {
             if (existingKey == key) {
-                return false;
+                return true;
             }
+        }
+        return false;
+    }
+
+    public boolean put(K key, V value) {
+        if (this.containsKey(key)) {
+            return false;
         }
         int elementsNumber = this.size();
         this.keys[elementsNumber] = key;
