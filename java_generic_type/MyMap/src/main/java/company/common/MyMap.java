@@ -20,10 +20,8 @@ public class MyMap<K, V> {
     }
 
     public boolean containsKey(K key) {
-        for (K existingKey : this.keys) {
-            if (existingKey == key) {
-                return true;
-            }
+        if (null != this.get(key)) {
+            return true;
         }
         return false;
     }
