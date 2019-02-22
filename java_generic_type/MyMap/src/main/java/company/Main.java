@@ -1,5 +1,6 @@
 package main.java.company;
 
+import main.java.company.common.Entry;
 import main.java.company.common.MyMap;
 
 public class Main {
@@ -39,5 +40,13 @@ public class Main {
         myMap.clear();
         myMap.printMyMap();
         System.out.println(myMap.size());
+
+        System.out.println("\nTraversing myMap:");
+        myMap.put(1, "a");
+        myMap.put(2, "b");
+        myMap.put(3, "c");
+        for (Entry entry : myMap.entrySet()) {
+            System.out.println(entry.getKey() + "=" + entry.getValue());
+        }
     }
 }

@@ -90,6 +90,14 @@ public class MyMap<K, V> {
         return null;
     }
 
+    public Entry[] entrySet() {
+        Entry[] entries = new Entry[this.size()];
+        for (int i = 0; i < this.size(); i++) {
+            entries[i] = new Entry<>(this.keys[i], this.values[i]);
+        }
+        return entries;
+    }
+
     public void printMyMap() {
         System.out.print("[");
         for (int i = 0; i < this.size(); i++) {
