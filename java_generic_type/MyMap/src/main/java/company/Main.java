@@ -48,5 +48,25 @@ public class Main {
         for (Entry entry : myMap.entrySet()) {
             System.out.println(entry.toString());
         }
+
+        System.out.println("\nAdd more elements to myMap:");
+        myMap.put(4, "d");
+        myMap.put(5, "d");
+        myMap.put(6, "d");
+        myMap.put(7, "d");
+        myMap.put(8, "d");
+        myMap.put(9, "d");
+        myMap.put(10, "d");
+        myMap.put(11, "d");
+        myMap.put(12, "d");
+        myMap.put(13, "d");
+        myMap.put(14, "d");
+        myMap.put(15, "d");
+        myMap.put(16, "d");
+        myMap.put(17, "d");
+        myMap.put(18, "d");
+        myMap.put(19, "d");
+        myMap.put(20, "d");
+        System.out.println(myMap.toString());
     }
 }

@@ -3,10 +3,16 @@ package main.java.company.common;
 public class MyMap<K, V> {
     private K[] keys;
     private V[] values;
+    private int initialCapacity;
+    private int capacity;
+    private double loadFactor;
 
     public MyMap() {
-        this.keys = (K[]) new Object[16];
-        this.values = (V[]) new Object[16];
+        this.initialCapacity = 16;
+        this.capacity = this.initialCapacity;
+        this.loadFactor = 0.75;
+        this.keys = (K[]) new Object[this.capacity];
+        this.values = (V[]) new Object[this.capacity];
     }
 
     public int size() {
@@ -17,6 +23,20 @@ public class MyMap<K, V> {
             }
         }
         return count;
+    }
+
+    private void expandCapacity() {
+        if (this.capacity * this.loadFactor == this.size()) {
+            this.capacity += this.initialCapacity;
+            K[] clonedKeys = (K[]) new Object[this.capacity];
+            V[] clonedValues = (V[]) new Object[this.capacity];
+            for (int i = 0; i < this.size(); i++) {
+                clonedKeys[i] = this.keys[i];
+                clonedValues[i] = this.values[i];
+            }
+            this.keys = clonedKeys;
+            this.values = clonedValues;
+        }
     }
 
     public boolean containsKey(K key) {
@@ -51,6 +71,7 @@ public class MyMap<K, V> {
         int elementsNumber = this.size();
         this.keys[elementsNumber] = key;
         this.values[elementsNumber] = value;
+        this.expandCapacity();
         return true;
     }
 
