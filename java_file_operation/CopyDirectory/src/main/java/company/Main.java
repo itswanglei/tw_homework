@@ -7,6 +7,6 @@ public class Main {
 
     public static void main(String[] args) {
         CopyDirectory copyDirectory = new CopyDirectory(ORIGIN_DIRECTORY, TARGET_PATH);
-        copyDirectory.createCopiedDirectory();
+        copyDirectory.createDirectory();
     }
 }

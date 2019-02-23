@@ -24,9 +24,8 @@ public class CopyDirectory {
         return targetDirectory;
     }
 
-    public boolean createCopiedDirectory() {
+    public boolean createDirectory() {
         return this.targetDirectory.mkdir();
     }
-
 
 }
