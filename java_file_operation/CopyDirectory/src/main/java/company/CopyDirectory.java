@@ -1,6 +1,6 @@
 package main.java.company;
 
-import java.io.File;
+import java.io.*;
 
 public class CopyDirectory {
     private final String originDirectoryPath;
@@ -28,4 +28,37 @@ public class CopyDirectory {
         return this.targetDirectory.mkdir();
     }
 
+    public boolean copyFiles() {
+        File[] originFiles = this.originDirectory.listFiles();
+        if (originFiles != null) {
+            for (File originFile : originFiles) {
+                String content = this.readFile(originFile);
+                File copiedFile = new File(this.targetDirectory, originFile.getName());
+                this.writeFile(copiedFile, content);
+            }
+        }
+        return true;
+    }
+
+    private String readFile(File file) {
+        try (FileReader reader = new FileReader(file)) {
+            int temp;
+            String content = "";
+            while ((temp = reader.read()) != -1) {
+                content += (char)temp;
+            }
+            return content;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    private void writeFile(File file, String content) {
+        try (FileWriter writer = new FileWriter(file)) {
+            writer.write(content);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
