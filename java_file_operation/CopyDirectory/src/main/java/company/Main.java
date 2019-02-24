@@ -6,8 +6,8 @@ public class Main {
     public static final String TARGET_PATH = "./docs";
 
     public static void main(String[] args) {
-        CopyDirectory copyDirectory = new CopyDirectory(ORIGIN_DIRECTORY, TARGET_PATH);
-        copyDirectory.createDirectory();
-        copyDirectory.copyFiles();
+        Copy copy = new Copy(ORIGIN_DIRECTORY, TARGET_PATH);
+        copy.copyDirectory();
+        copy.copyFiles();
     }
 }

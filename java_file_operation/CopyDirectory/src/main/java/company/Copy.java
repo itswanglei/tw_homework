@@ -2,13 +2,13 @@ package main.java.company;
 
 import java.io.*;
 
-public class CopyDirectory {
+public class Copy {
     private final String originDirectoryPath;
     private final String targetPath;
     private final File originDirectory;
     private final File targetDirectory;
 
-    public CopyDirectory(String originDirectoryPath, String targetPath) {
+    public Copy(String originDirectoryPath, String targetPath) {
         this.originDirectoryPath = originDirectoryPath;
         this.targetPath = targetPath;
         this.originDirectory = new File(this.originDirectoryPath);
@@ -24,7 +24,7 @@ public class CopyDirectory {
         return targetDirectory;
     }
 
-    public boolean createDirectory() {
+    public boolean copyDirectory() {
         return this.targetDirectory.mkdir();
     }
 
