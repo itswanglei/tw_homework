@@ -15,6 +15,14 @@ public class MyMap<K, V> {
         this.values = (V[]) new Object[this.capacity];
     }
 
+    public MyMap(int initialCapacity, double loadFactor) {
+        this.initialCapacity = initialCapacity;
+        this.capacity = this.initialCapacity;
+        this.loadFactor = loadFactor;
+        this.keys = (K[]) new Object[this.capacity];
+        this.values = (V[]) new Object[this.capacity];
+    }
+
     public int size() {
         int count = 0;
         for (K key : this.keys) {

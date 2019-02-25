@@ -68,5 +68,9 @@ public class Main {
         myMap.put(19, "d");
         myMap.put(20, "d");
         System.out.println(myMap);
+
+        System.out.println("\nTest constructor with parameters:");
+        MyMap newMap = new MyMap(20, 0.8);
+        System.out.println(newMap);
     }
 }
