@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Instantiate myMap:");
         MyMap<Integer, String> myMap = new MyMap<>();
-        System.out.println(myMap.toString());
+        System.out.println(myMap);
 
         System.out.println("\nJudge if myMap has the specified key:");
         System.out.println(myMap.containsKey(1));
@@ -16,7 +16,7 @@ public class Main {
         System.out.println("\nAdd element for myMap:");
         myMap.put(1, "a");
         myMap.put(2, "b");
-        System.out.println(myMap.toString());
+        System.out.println(myMap);
 
         System.out.println("\nCalculate the size of myMap:");
         System.out.println(myMap.size());
@@ -26,19 +26,19 @@ public class Main {
 
         System.out.println("\nRemove the specified map in myMap:");
         System.out.println(myMap.remove(1));
-        System.out.println(myMap.toString());
+        System.out.println(myMap);
         System.out.println(myMap.size());
 
         System.out.println("\nChange the value of the specified key:");
         System.out.println(myMap.replace(2, "a"));
-        System.out.println(myMap.toString());
+        System.out.println(myMap);
 
         System.out.println("\nJudge if the map has the specified value:");
         System.out.println(myMap.containsValue("a"));
 
         System.out.println("\nClear myMap:");
         myMap.clear();
-        System.out.println(myMap.toString());
+        System.out.println(myMap);
         System.out.println(myMap.size());
 
         System.out.println("\nTraversing myMap:");
@@ -46,7 +46,7 @@ public class Main {
         myMap.put(2, "b");
         myMap.put(3, "c");
         for (Entry entry : myMap.entrySet()) {
-            System.out.println(entry.toString());
+            System.out.println(entry);
         }
 
         System.out.println("\nAdd more elements to myMap:");
@@ -67,6 +67,6 @@ public class Main {
         myMap.put(18, "d");
         myMap.put(19, "d");
         myMap.put(20, "d");
-        System.out.println(myMap.toString());
+        System.out.println(myMap);
     }
 }
