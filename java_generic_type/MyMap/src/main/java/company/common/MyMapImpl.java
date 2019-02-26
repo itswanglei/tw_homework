@@ -23,6 +23,7 @@ public class MyMapImpl<K, V> implements MyMap {
         this.values = (V[]) new Object[this.capacity];
     }
 
+    @Override
     public int size() {
         int count = 0;
         for (K key : this.keys) {
@@ -47,10 +48,12 @@ public class MyMapImpl<K, V> implements MyMap {
         }
     }
 
+    @Override
     public boolean containsKey(Object key) {
         return null != this.get(key);
     }
 
+    @Override
     public boolean containsValue(Object value) {
         for (int i = 0; i < this.size(); i++) {
             if (value == this.values[i]) {
@@ -60,6 +63,7 @@ public class MyMapImpl<K, V> implements MyMap {
         return false;
     }
 
+    @Override
     public V get(Object key) {
         for (int i = 0; i < this.size(); i++) {
             if (key == this.keys[i]) {
@@ -69,6 +73,7 @@ public class MyMapImpl<K, V> implements MyMap {
         return null;
     }
 
+    @Override
     public boolean put(Object key, Object value) {
         if (this.containsKey(key)) {
             return false;
@@ -80,6 +85,7 @@ public class MyMapImpl<K, V> implements MyMap {
         return true;
     }
 
+    @Override
     public V remove(Object key) {
         V removedValue;
         for (int i = 0; i < this.size(); i++) {
@@ -97,6 +103,7 @@ public class MyMapImpl<K, V> implements MyMap {
         return null;
     }
 
+    @Override
     public void clear() {
         for (int i = 0; i < this.size(); i++) {
             this.keys[i] = null;
@@ -104,6 +111,7 @@ public class MyMapImpl<K, V> implements MyMap {
         }
     }
 
+    @Override
     public V replace(Object key, Object values) {
         V replacedValue;
         for (int i = 0; i < this.size(); i++) {
@@ -116,6 +124,7 @@ public class MyMapImpl<K, V> implements MyMap {
         return null;
     }
 
+    @Override
     public Entry[] entrySet() {
         Entry[] entries = new Entry[this.size()];
         for (int i = 0; i < this.size(); i++) {
