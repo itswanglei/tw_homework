@@ -36,8 +36,9 @@ public class Copy {
                 File copiedFile = new File(this.targetDirectory, originFile.getName());
                 this.writeFile(copiedFile, content);
             }
+            return true;
         }
-        return true;
+        return false;
     }
 
     private String readFile(File file) {
