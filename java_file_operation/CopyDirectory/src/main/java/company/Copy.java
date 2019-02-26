@@ -44,11 +44,11 @@ public class Copy {
     private String readFile(File file) {
         try (FileReader reader = new FileReader(file)) {
             int temp;
-            String content = "";
+            StringBuilder content = new StringBuilder();
             while ((temp = reader.read()) != -1) {
-                content += (char)temp;
+                content.append((char) temp);
             }
-            return content;
+            return content.toString();
         } catch (IOException e) {
             e.printStackTrace();
             return null;
