@@ -1,13 +1,13 @@
 package main.java.company;
 
 import main.java.company.common.Entry;
-import main.java.company.common.MyMap;
+import main.java.company.common.MyMapImpl;
 
 public class Main {
 
     public static void main(String[] args) {
         System.out.println("Instantiate myMap:");
-        MyMap<Integer, String> myMap = new MyMap<>();
+        MyMapImpl<Integer, String> myMap = new MyMapImpl<>();
         System.out.println(myMap);
 
         System.out.println("\nJudge if myMap has the specified key:");
@@ -70,7 +70,7 @@ public class Main {
         System.out.println(myMap);
 
         System.out.println("\nTest constructor with parameters:");
-        MyMap newMap = new MyMap(20, 0.8);
+        MyMapImpl newMap = new MyMapImpl(20, 0.8);
         System.out.println(newMap);
     }
 }
