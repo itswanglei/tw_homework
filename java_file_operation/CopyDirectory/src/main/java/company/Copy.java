@@ -3,15 +3,13 @@ package main.java.company;
 import java.io.*;
 
 public class Copy {
-    private final String originDirectoryPath;
     private final String targetPath;
     private final File originDirectory;
     private final File targetDirectory;
 
     public Copy(String originDirectoryPath, String targetPath) {
-        this.originDirectoryPath = originDirectoryPath;
         this.targetPath = targetPath;
-        this.originDirectory = new File(this.originDirectoryPath);
+        this.originDirectory = new File(originDirectoryPath);
         this.targetDirectory = this.generateCopiedDirectoryPath();
     }
 
