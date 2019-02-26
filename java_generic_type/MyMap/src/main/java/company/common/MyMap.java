@@ -1,6 +1,6 @@
 package main.java.company.common;
 
-public class MyMap<K, V> {
+public class MyMap<K, V> implements MyMapInterface{
     private K[] keys;
     private V[] values;
     private int initialCapacity;
@@ -47,14 +47,14 @@ public class MyMap<K, V> {
         }
     }
 
-    public boolean containsKey(K key) {
+    public boolean containsKey(Object key) {
         if (null != this.get(key)) {
             return true;
         }
         return false;
     }
 
-    public boolean containsValue(V value) {
+    public boolean containsValue(Object value) {
         for (int i = 0; i < this.size(); i++) {
             if (value == this.values[i]) {
                 return true;
@@ -63,7 +63,7 @@ public class MyMap<K, V> {
         return false;
     }
 
-    public V get(K key) {
+    public V get(Object key) {
         for (int i = 0; i < this.size(); i++) {
             if (key == this.keys[i]) {
                 return this.values[i];
@@ -72,18 +72,18 @@ public class MyMap<K, V> {
         return null;
     }
 
-    public boolean put(K key, V value) {
+    public boolean put(Object key, Object value) {
         if (this.containsKey(key)) {
             return false;
         }
         int elementsNumber = this.size();
-        this.keys[elementsNumber] = key;
-        this.values[elementsNumber] = value;
+        this.keys[elementsNumber] = (K) key;
+        this.values[elementsNumber] = (V) value;
         this.expandCapacity();
         return true;
     }
 
-    public V remove(K key) {
+    public V remove(Object key) {
         V removedValue;
         for (int i = 0; i < this.size(); i++) {
             if (key == this.keys[i]) {
@@ -107,12 +107,12 @@ public class MyMap<K, V> {
         }
     }
 
-    public V replace(K key, V values) {
+    public V replace(Object key, Object values) {
         V replacedValue;
         for (int i = 0; i < this.size(); i++) {
             if (key == this.keys[i]) {
                 replacedValue = this.values[i];
-                this.values[i] = values;
+                this.values[i] = (V) values;
                 return replacedValue;
             }
         }
