@@ -72,5 +72,8 @@ public class Main {
         System.out.println("\nTest constructor with parameters:");
         MyMapImpl newMap = new MyMapImpl(20, 0.8);
         System.out.println(newMap);
+
+        System.out.println("\nJudge if the map is empty:");
+        System.out.println(newMap.isEmpty());
     }
 }

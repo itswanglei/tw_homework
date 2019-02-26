@@ -18,4 +18,6 @@ public interface MyMap<K, V> {
     public V replace(K key, V value);
 
     public Entry[] entrySet();
+
+    public boolean isEmpty();
 }

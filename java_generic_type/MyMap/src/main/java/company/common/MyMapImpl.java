@@ -134,6 +134,11 @@ public class MyMapImpl<K, V> implements MyMap {
     }
 
     @Override
+    public boolean isEmpty() {
+        return 0 == this.size();
+    }
+
+    @Override
     public String toString() {
         String[] entryStringArray = new String[this.size()];
         Entry[] entries = this.entrySet();
