@@ -48,10 +48,7 @@ public class MyMapImpl<K, V> implements MyMap {
     }
 
     public boolean containsKey(Object key) {
-        if (null != this.get(key)) {
-            return true;
-        }
-        return false;
+        return null != this.get(key);
     }
 
     public boolean containsValue(Object value) {
