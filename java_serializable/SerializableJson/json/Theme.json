@@ -1,0 +1,12 @@
+{
+  "title": "JSON Example",
+  "nested": {
+    "someInteger": 7,
+    "someBoolean": true,
+    "someArray": Array[3][
+      "list of",
+      "fake strings",
+      "and fake keys"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "rating": {
+    "max": 10,
+    "average": 8.8,
+    "stars": "45",
+    "min": 0
+  },
+  "year": "2003",
+  "alt": "https://movie.douban.com/subject/1291545/",
+  "id": "1291545",
+  "title": "大鱼",
+  "genres": [
+    "剧情",
+    "家庭",
+    "奇幻"
+  ]
+}
