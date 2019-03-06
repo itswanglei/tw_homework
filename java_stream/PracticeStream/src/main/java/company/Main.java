@@ -13,93 +13,41 @@ import java.util.stream.Stream;
 public class Main {
 
     public static void main(String[] args) {
-//        Stream<String> stringStream = Stream.empty();
-//        stringStream.forEach(System.out::println);
-//
-//        Collection<Integer> collection = Arrays.asList(1, 2, 3, 4, 5);
-//        Stream<Integer> integerStream = collection.stream();
-//        integerStream.forEach(System.out::println);
-//
-//        String[] array = new String[]{"a", "b", "c", "d"};
-//        stringStream = Arrays.stream(array);
-//        stringStream.forEach(System.out::println);
-//
-//        Stream.<Integer>builder().add(100).add(200).build().forEach(System.out::println);
-//
-//        Stream.generate(() -> "element").limit(3).forEach(System.out::println);
-//
-//        Stream.iterate(2, i -> i * i).limit(4).forEach(System.out::println);
-//
-//        IntStream intStream = IntStream.range(1, 9); //rangeClosed
-//        intStream.forEach(System.out::println);
-//
-//        Random random = new Random();
-//        DoubleStream doubleStream = random.doubles(3);
-//        doubleStream.forEach(System.out::println);
-//
-//        IntStream streamOfChars = "ThoughtWorks".chars();
-//        streamOfChars.forEach(System.out::println);
-//
-//        Path path = Paths.get("./docs/text.txt");
-//        try {
-//            Stream<String> streamOfStrings = Files.lines(path);
-//            streamOfStrings.forEach(System.out::println);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        Stream<String> onceModifiedStream = Stream.of("abcd", "bbcd", "cbcd").skip(1);
-//        onceModifiedStream.forEach(System.out::println);
-//
-//        int sum = Stream.iterate(1, i -> i++)
-//                .limit(5 - 1 + 1)
-//                .filter(item -> 0 == item % 2)
-//                .mapToInt(Integer::valueOf)
-//                .sum();
-//        System.out.println(sum);
-//
-//        Stream.iterate(1, i -> i + 1)
-//                .limit(5 - 1 + 1)
-//                .filter(item -> 0 == item % 2)
-//                .forEach(System.out::println);
+        // 创建stream的几种方式
+        Stream<String> emptyStream = Stream.empty();
 
-//                List<Product> productList = Arrays.asList(new Product(23, "potatoes"),
-//                new Product(14, "orange"),
-//                new Product(13, "lemon"),
-//                new Product(23, "bread"),
-//                new Product(13, "sugar"),
-//                new Product(25, "beef"));
-//
-//        String listToString = productList.stream()
-//                .map(Product::getName)
-//                .collect(Collectors.joining(", ", "[", "]"));
-//
-//        System.out.println(listToString);
-//
-//        double averagePrice = productList.stream().collect(Collectors.averagingDouble(Product::getPrice));
-//        System.out.println(averagePrice);
-//
-//        int totalPrice = productList.stream().collect(Collectors.summingInt(Product::getPrice));
-//        System.out.println(totalPrice);
-//
-//        IntSummaryStatistics statistics = productList.stream().collect(Collectors.summarizingInt(Product::getPrice));
-//        System.out.println(statistics);
-//        System.out.println(statistics.getMax());
-//        System.out.println(statistics.getMin());
-//        System.out.println(statistics.getAverage());
-//        System.out.println(statistics.getSum());
-//        System.out.println(statistics.getCount());
-//
-//        Map<Integer, List<Product>> productMap = productList.stream().collect(Collectors.groupingBy(Product::getPrice));
-//        System.out.println(productMap);
-//
-//        Map<Boolean, List<Product>> seperateByPrice = productList.stream().collect(Collectors.partitioningBy(item -> item.getPrice() > 14));
-//        System.out.println(seperateByPrice.get(false)
-//                .stream()
-//                .map(Product::getName)
-//                .collect(Collectors.joining(",", "[", "]")));
+        Collection<Integer> collection = Arrays.asList(1, 2, 3, 4, 5);
+        Stream<Integer> streamFromCollection = collection.stream();
+
+        String[] array = new String[]{"a", "b", "c", "d"};
+        Stream<String> StreamFromArray = Arrays.stream(array);
+
+        Stream<Integer> streamByBuilder = Stream.<Integer>builder().add(100).add(200).build();
+
+        Stream<String> streamByGenerate = Stream.generate(() -> "element").limit(3);
+
+        Stream<Integer> streamByIterate = Stream.iterate(2, i -> i * i).limit(4);
+
+        IntStream streamByRange = IntStream.range(1, 9);
+        IntStream streamByRangeClosed = IntStream.rangeClosed(1, 9);
+
+        Random random = new Random();
+        DoubleStream streamByRandom = random.doubles(3);
+
+        IntStream streamOfChars = "ThoughtWorks".chars();
+
+        Path path = Paths.get("./docs/text.txt");
+        try {
+            Stream<String> streamFromFile = Files.lines(path);
+            streamFromFile.forEach(System.out::println);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Stream<String> streamByOf = Stream.of("abcd", "bbcd", "cbcd");
 
 
+        // 使用Stream和Lambda表达式操作集合
         Integer[] integers = new Integer[]{1, 2, 3, 4, 5, 5, 4, 3};
         List<Integer> list = Arrays.asList(integers);
 
@@ -111,11 +59,11 @@ public class Main {
 
         long size = list.stream().count();
 
+        int firstElment = list.stream().findFirst().get();
+
         List<Integer> distinctList = list.stream().distinct().collect(Collectors.toList());
 
         List<Integer> evenElements = list.stream().filter(i -> 0 == i % 2).collect(Collectors.toList());
-
-        int firstElment = list.stream().findFirst().get();
 
         List<Integer> doubleList = list.stream().map(i -> i * i).collect(Collectors.toList());
 
@@ -147,14 +95,27 @@ public class Main {
         average = statistics.getAverage();
         summary = statistics.getSum();
 
-        Map<Integer, List<Integer>> map1 = list.stream().collect(Collectors.groupingBy(i -> i * i));
-
-        Map<Boolean, List<Integer>> map2 = list.stream().collect(Collectors.partitioningBy(i -> i > 3));
-        List integer = map2.get(true);
-
         list.stream().skip(2).forEach(System.out::println);
 
         List orderedList = list.stream().sorted(Collections.reverseOrder()).collect(Collectors.toList());
+
+
+        List<Product> productList = Arrays.asList(new Product(23, "potatoes"),
+                new Product(14, "orange"),
+                new Product(13, "lemon"),
+                new Product(23, "bread"),
+                new Product(13, "sugar"),
+                new Product(25, "beef"));
+
+        Map<Integer, List<Product>> productMap = productList.stream().collect(Collectors.groupingBy(Product::getPrice));
+        System.out.println(productMap);
+
+        Map<Boolean, List<Product>> seperateByPrice = productList.stream().collect(Collectors.partitioningBy(item -> item.getPrice() > 14));
+        System.out.println(seperateByPrice.get(false)
+                .stream()
+                .map(Product::getName)
+                .collect(Collectors.joining(",", "[", "]")));
+
 
     }
 }
