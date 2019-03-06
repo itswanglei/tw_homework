@@ -13,48 +13,16 @@ public class CityToCity implements Transportation {
         this.destination = destination;
     }
 
-    public String getDeparture() {
-        return this.departure;
-    }
-
-    public void setDeparture(String departure) {
-        this.departure = departure;
-    }
-
-    public String getDestination() {
-        return this.destination;
-    }
-
-    public void setDestination(String destination) {
-        this.destination = destination;
-    }
-
-    public double getCostOfSelfDriving() {
-        return this.costOfSelfDriving;
-    }
-
     public void setCostOfSelfDriving(double costOfSelfDriving) {
         this.costOfSelfDriving = costOfSelfDriving;
-    }
-
-    public double getCostOfTakeBus() {
-        return this.costOfTakeBus;
     }
 
     public void setCostOfTakeBus(double costOfTakeBus) {
         this.costOfTakeBus = costOfTakeBus;
     }
 
-    public double getCostOfTakePlane() {
-        return this.costOfTakePlane;
-    }
-
     public void setCostOfTakePlane(double costOfTakePlane) {
         this.costOfTakePlane = costOfTakePlane;
-    }
-
-    public double getCostOfTakeTrain() {
-        return this.costOfTakeTrain;
     }
 
     public void setCostOfTakeTrain(double costOfTakeTrain) {

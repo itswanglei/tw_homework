@@ -12,8 +12,6 @@ public class Main {
         double money = 100;
         int total = 100;
 
-        Print print = new Print();
-
         Fowl cock = new Cock();
         Fowl hen = new Hen();
         Fowl chick = new Chick();
@@ -27,10 +25,14 @@ public class Main {
                 boolean isMoneyOfChickInteger = chickQuantity % 3 == 0;
                 boolean isEqualTotalMonay = cockQuantity * cock.getPrice() + henQuantity * hen.getPrice() + chickQuantity / 3 == money;
                 if (isMoneyOfChickInteger && isEqualTotalMonay) {
-                    print.printResult(cockQuantity, henQuantity, chickQuantity);
+                    printResult(cockQuantity, henQuantity, chickQuantity);
                 }
             }
         }
+    }
+
+    public static void printResult(int cockQuantity, int henQuantity, int chickQuantity) {
+        System.out.println("买公鸡" + cockQuantity + "只，买母鸡" + henQuantity + "只，买小鸡" + chickQuantity + "只");
     }
 
 }
