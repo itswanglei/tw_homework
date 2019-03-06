@@ -19,6 +19,6 @@ public class Main {
     }
 
     public static Integer calculate(BinaryOperation<Integer, Integer> operation, Integer a, Integer b) {
-        return operation.binaryOperation(a, b);
+        return operation.apply(a, b);
     }
 }
