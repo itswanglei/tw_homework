@@ -4,7 +4,6 @@ import main.java.company.model.Chick;
 import main.java.company.model.Cock;
 import main.java.company.model.Fowl;
 import main.java.company.model.Hen;
-import main.java.company.tools.Print;
 
 public class Main {
 
