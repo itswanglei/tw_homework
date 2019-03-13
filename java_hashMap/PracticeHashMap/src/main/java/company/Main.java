@@ -2,6 +2,8 @@ package main.java.company;
 
 import java.util.*;
 
+import static java.util.Map.Entry.comparingByValue;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -49,5 +51,23 @@ public class Main {
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
+
+        // 按值排序
+        System.out.println("\n按值排序：");
+        HashMap sortedMap = sortByValues(hashMap);
+        sortedMap.entrySet().forEach(System.out::println);
+    }
+
+    public static HashMap sortByValues(HashMap map) {
+        List list = new LinkedList(map.entrySet());
+//        list.sort((o1, o2) -> ((Comparable) ((Map.Entry) o1).getValue())
+//                .compareTo(((Map.Entry) o2).getValue()));
+        list.sort(comparingByValue());
+        HashMap sortedMap = new LinkedHashMap();
+        for (Object o : list) {
+            Map.Entry entry = (Map.Entry) o;
+            sortedMap.put(entry.getKey(), entry.getValue());
+        }
+        return sortedMap;
     }
 }
