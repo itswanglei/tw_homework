@@ -19,8 +19,4 @@ WHERE id = '1';
 
 DELETE FROM student WHERE age = '20' AND sex = '女';
 
-
-
 SELECT * FROM student;
-
-DROP TABLE student;
