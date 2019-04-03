@@ -106,8 +106,11 @@
 4. 试卷表 paper
    - id，INT型，主键
    - subject_id，INT型，外键 subject.id
-   - questions，VARCHAR型，非空
-5. 成绩表 score
+5. 试题表 test_question
+   - id，INT型，主键
+   - paper_id，INT型，外键 paper.id
+   - content，VARCHAR型
+6. 成绩表 score
    - id，INT型，主键
    - student_id，INT型，外键 student.id
    - subject_id，INT型，外键 subject.id
