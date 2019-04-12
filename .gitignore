@@ -97,3 +97,6 @@ hs_err_pid*
 .idea/
 out/
 *.iml
+
+# External libraries
+*/lib/.
