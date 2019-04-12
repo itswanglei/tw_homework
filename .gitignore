@@ -99,4 +99,4 @@ out/
 *.iml
 
 # External libraries
-*/lib/.
+*/*/lib/.
