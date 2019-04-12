@@ -98,5 +98,4 @@ hs_err_pid*
 out/
 *.iml
 
-# External libraries
-*/*/lib/.
+
