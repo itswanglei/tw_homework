@@ -21,4 +21,8 @@ public class Tools {
     public List<Integer> orderIntegerArray(int[] array) {
         return Arrays.stream(array).boxed().sorted().collect(Collectors.toList());
     }
+
+    public int sumEven(int[] array) {
+        return Arrays.stream(array).boxed().reduce(0, Integer::sum);
+    }
 }

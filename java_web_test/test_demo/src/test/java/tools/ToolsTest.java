@@ -61,4 +61,18 @@ public class ToolsTest {
 
         assertEquals(expect, result);
     }
+
+    @Test
+    public void test_sum_even_when_array_length_is_1() {
+        int[] array = {5};
+        int result = this.tools.sumEven(array);
+        assertEquals(5, result);
+    }
+
+    @Test
+    public void test_sum_even_when_array_length_is_more_than_1() {
+        int[] array = {1, 2, 3, 4};
+        int result = this.tools.sumEven(array);
+        assertEquals(10, result);
+    }
 }
