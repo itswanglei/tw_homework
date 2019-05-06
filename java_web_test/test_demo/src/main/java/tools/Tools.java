@@ -1,5 +1,9 @@
 package tools;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Tools {
 
     public int getFibonacciSequence(int number) {
@@ -12,5 +16,9 @@ public class Tools {
         }
 
         return getFibonacciSequence(number - 1) + getFibonacciSequence(number - 2);
+    }
+
+    public List<Integer> orderIntegerArray(int[] array) {
+        return Arrays.stream(array).boxed().sorted().collect(Collectors.toList());
     }
 }
