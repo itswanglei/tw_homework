@@ -63,16 +63,23 @@ public class ToolsTest {
     }
 
     @Test
-    public void test_sum_even_when_array_length_is_1() {
-        int[] array = {5};
+    public void test_sum_even_when_array_only_has_odd() {
+        int[] array = {5, 7};
         int result = this.tools.sumEven(array);
-        assertEquals(5, result);
+        assertEquals(0, result);
     }
 
     @Test
-    public void test_sum_even_when_array_length_is_more_than_1() {
-        int[] array = {1, 2, 3, 4};
+    public void test_sum_even_when_array_only_has_even() {
+        int[] array = {4, 6};
         int result = this.tools.sumEven(array);
         assertEquals(10, result);
+    }
+
+    @Test
+    public void test_sum_even_when_array_has_even_and_odd() {
+        int[] array = {1, 2, 3, 4};
+        int result = this.tools.sumEven(array);
+        assertEquals(6, result);
     }
 }

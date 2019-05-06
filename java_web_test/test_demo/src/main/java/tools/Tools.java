@@ -23,6 +23,6 @@ public class Tools {
     }
 
     public int sumEven(int[] array) {
-        return Arrays.stream(array).boxed().reduce(0, Integer::sum);
+        return Arrays.stream(array).boxed().filter(e -> 0 == e % 2).reduce(0, Integer::sum);
     }
 }
