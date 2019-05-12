@@ -1,30 +1,28 @@
 package com.example.demo.dao;
 
-import com.example.demo.dao.StudentRepository;
 import com.example.demo.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/students/")
 public class StudentInforController {
 
     @Autowired
     private StudentRepository studentRepository;
 
-    @GetMapping("/all/")
+    @GetMapping("/students/")
     public Iterable<Student> getAllStudents() {
         return studentRepository.findAll();
     }
 
-    @GetMapping("/find/")
+    @GetMapping("/students/{id}/")
     public Student getStudentById(
-            @RequestParam Integer id
+            @PathVariable("id") Integer id
     ) {
         return studentRepository.findById(id).get();
     }
 
-    @PostMapping("/add/")
+    @PostMapping("/students/")
     public String addStudent(
             @RequestParam String name,
             @RequestParam int age,
@@ -38,9 +36,9 @@ public class StudentInforController {
         return "Added";
     }
 
-    @PostMapping("/modify/")
+    @PutMapping("/students/{id}/")
     public String modifyStudent(
-            @RequestParam Integer id,
+            @PathVariable("id") Integer id,
             @RequestParam String name,
             @RequestParam int age,
             @RequestParam String sex
@@ -49,12 +47,13 @@ public class StudentInforController {
         student.setName(name);
         student.setAge(age);
         student.setSex(sex);
+        studentRepository.save(student);
         return "Modified";
     }
 
-    @DeleteMapping("/delete/")
+    @DeleteMapping("/students/{id}/")
     public String deleteStudent(
-            @RequestParam Integer id
+            @PathVariable("id") Integer id
     ) {
         studentRepository.deleteById(id);
         return "Deleted";
